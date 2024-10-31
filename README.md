@@ -24,7 +24,7 @@ npm run start
 ```
 
 ## 🔄 Personalizzazione
-Vuoi aggiungere un tocco personale modificando i nomi/numeri esclusi dalla pick random? Puoi farlo facilmente. Vai rispettivamente in **components/RandomNameGenerator.js** oppure in **components/RandomNumberGenerator.js** e modifica il seguente pezzo di codice: 
+Vuoi aggiungere un tocco personale modificando i nomi/numeri esclusi dalla pick random? Puoi farlo facilmente. Vai rispettivamente in components/RandomNameGenerator.js oppure in components/RandomNumberGenerator.js e modifica il seguente pezzo di codice: 
 
 
 - **Numeri Speciali**: Modifica l'array specialNumbers in RandomNumberGenerator.js:
