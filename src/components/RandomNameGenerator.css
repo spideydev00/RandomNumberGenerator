@@ -1,0 +1,109 @@
+/* src/components/RandomNameGenerator.css */
+
+.generator-box {
+  width: 250px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: left;
+  color: #333;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.generator-title {
+  background-color: #d2d2fa;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  margin: -10px -10px 10px -10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.name-input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.name-input-group input {
+  flex: 1;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-button {
+  padding: 5px 10px;
+  font-size: 12px;
+  color: #0073e6;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #e0e0e0;
+}
+
+.generate-button {
+  display: block;
+  width: 100%;
+  padding: 4px 0;
+  font-size: 14px;
+  color: #0073e6;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.generate-button:hover {
+  background-color: #e0e0e0;
+}
+
+.result-box {
+  margin-top: 10px;
+  background-color: #d2d2fa;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.result-name {
+  font-size: 23px;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+.name-list {
+  margin-top: 10px;
+}
+
+.name-item {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #0073e6; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 10px auto; /* Center the spinner */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+

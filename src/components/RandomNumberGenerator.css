@@ -1,0 +1,160 @@
+/* src/components/RandomNumberGenerator.css */
+
+.generator-box {
+  width: 200px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: left;
+  color: #333;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.generator-title {
+  background-color: #d2d2fa;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  margin: -10px -10px 10px -10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.label-input-pair {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between label and input */
+}
+
+.label-input-pair label {
+  font-size: 14px;
+  color: #666;
+}
+
+input[type="number"] {
+  width: 120px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.generate-button {
+  display: block;
+  width: 45%;
+  padding: 4px 0;
+  font-size: 14px;
+  color: #0073e6;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.generate-button:hover {
+  background-color: #e0e0e0;
+}
+
+.result-label {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.result-box {
+  margin-top: -10px;
+  background-color: #d2d2fa;
+  text-align: center;
+  transition: padding 0.3s ease, height 0.3s ease; /* Smooth transition */
+}
+
+.result-box.empty {
+  height: 10px;
+  padding: 0;
+}
+
+.result-box.filled {
+  padding: 3px;
+  height: auto;
+}
+
+.result-number {
+  font-size: 23px;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+.result-box p {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0 0 0;
+}
+
+.powered-by {
+  font-size: 10px;
+  color: #666;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.powered-by a {
+  color: #666;
+  text-decoration: none;
+}
+
+.powered-by a:hover {
+  text-decoration: underline;
+}
+
+.generator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.switch-generator {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  margin-left: 10px;
+}
+
+.switch-generator span {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.switch-generator span:hover {
+  color: darkblue;
+}
+
+/* src/components/RandomNumberGenerator.css */
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #0073e6;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 0.5s linear infinite;
+  margin: 10px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
