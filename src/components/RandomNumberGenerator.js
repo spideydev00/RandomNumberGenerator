@@ -22,7 +22,7 @@ const RandomNumberGenerator = () => {
     setTimeout(() => {
       let randomNumber = null;
 
-      // Logica per estrarre i numeri speciali solo al 3° e 4° turno
+      // Logica per estrarre 2 al 3° turno e 3 al 4° turno
       if (extractionCount === 2 && !hasExtractedTwo) {
         randomNumber = 2;
         setHasExtractedTwo(true);
@@ -30,22 +30,24 @@ const RandomNumberGenerator = () => {
         randomNumber = 3;
         setHasExtractedThree(true);
       } else {
-        // Filtra 2 e 3 se i rispettivi turni non sono ancora stati raggiunti
+        // Selezione casuale per gli altri turni, escludendo i numeri speciali finché non è il loro turno
         const availableNumbers = [];
         for (let i = min; i <= max; i++) {
           if (!specialNumbers.includes(i) || 
-              (i === 2 && !hasExtractedTwo && extractionCount >= 2) ||
-              (i === 3 && !hasExtractedThree && extractionCount >= 3)) {
+              (i === 2 && extractionCount >= 2 && !hasExtractedTwo) ||
+              (i === 3 && extractionCount >= 3 && !hasExtractedThree)) {
             availableNumbers.push(i);
           }
         }
 
+        // Estrarre un numero casuale tra quelli disponibili
         if (availableNumbers.length > 0) {
           const randomIndex = Math.floor(Math.random() * availableNumbers.length);
           randomNumber = availableNumbers[randomIndex];
         }
       }
 
+      // Imposta il risultato e aggiorna il contatore delle estrazioni e il timestamp
       if (randomNumber !== null) {
         setResult(randomNumber);
         setExtractionCount(extractionCount + 1);
